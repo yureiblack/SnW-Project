@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1C1C1C; /* Dark base color */
+            overflow: hidden; /* Prevent scrolling */
+            position: relative; /* To position pseudo-elements correctly */
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#FF8C00, #FF4500); /* Orange gradient */
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Star shape */
+            animation: rotate 15s linear infinite; /* Add rotation effect */
+            z-index: 0; /* Ensure it stays behind content */
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(10%);
+            }
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            flex-wrap: wrap;
+            z-index: 1;
+        }
+
+        .container .card {
+            position: relative;
+            width: 280px;
+            height: 400px;
+            margin: 30px;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(5px);
+            transition: transform 0.5s ease;
+        }
+
+        .container .card:hover {
+            transform: translateY(-10px); /* Adds a slight lift on hover */
+        }
+
+        .container .card .content {
+            padding: 20px;
+            text-align: center;
+            transform: translateY(80px);
+            opacity: 0;
+            transition: transform 0.5s, opacity 0.5s;
+        }
+
+        .container .card:hover .content {
+            transform: translateY(20px);
+            opacity: 1;
+        }
+
+        .container .card .content h2 {
+            position: absolute;
+            top: -100px;
+            right: 30px;
+            font-size: 8em;
+            color: rgba(255, 255, 255, 0.3);
+            pointer-events: none;
+        }
+
+        .container .card .content h3 {
+            font-size: 1.8em;
+            color: #fff;
+            z-index: 1;
+            margin-bottom: 10px; /* Add some space below the heading */
+        }
+
+        .container .card .content p {
+            font-size: 1em;
+            color: #fff;
+            font-weight: 300;
+            margin-bottom: 15px; /* Add some space below the paragraph */
+        }
+
+        .container .card .content a {
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            padding: 8px 20px;
+            background: #FF8C00; /* Orange button color */
+            color: #fff;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .container .card .content a:hover {
+            background: #FF4500; /* Change background color on hover */
+            color: #fff; /* Change text color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <h2>01</h2>
+                <h3>Aryan Verma</h3>
+                <p>aryan.verma@adypu.edu.in</p>
+                <a href="https://github.com/notAryan10">Github ID</a>
+                <a href="index.html">Back to Home Page</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2>02</h3>
+                <h3>Sayuri Janbandhu</h3>
+                <p>sayuri.janbandhu@adypu.edu.in</p>
+                <a href="https://github.com/yureiblack">Github ID</a>
+                <a href="index.html">Back to Home Page</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2>03</h3>
+                <h3>Sahil Manjhi</h3>
+                <p>sahil.manjhi@adypu.edu.in</p><br>
+                <a href="https://github.com/sahilsharda">Github ID</a>
+                <a href="index.html">Back to Home Page</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

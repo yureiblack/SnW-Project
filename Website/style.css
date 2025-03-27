@@ -1,0 +1,739 @@
+@import url('https://fonts.cdnfonts.com/css/dungeon-depths');
+
+*{
+    text-decoration: none;
+    font-family: 'poppins';
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#121212, rgb(42, 42, 42));
+}
+.navbar{
+    border-top: 4px solid rgb(250, 108, 0);
+    background: #121212;
+    font-family: calibri; 
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 18px;
+    padding-bottom: 3px;
+}
+.navdiv{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+.para1:nth-child(1){
+    margin-top: 50px;
+}
+.para1{
+    margin-top: 20px;
+}
+.para2{
+    font-size: 20px;
+    margin-right: 20px;
+}
+button{
+    height: 40px;
+    list-style: none; 
+    background-color: #121212; 
+    border: none; 
+    text-align: center;
+    transition: box-shadow 500ms ease;
+    border-radius: 10px;
+}
+button a{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+button:hover {
+    box-shadow: 0px 1px rgb(196, 196, 196);
+    transform: translateY(-1px);
+}
+.container{
+    height: 100vh;
+    background-image: url("Images/neww-gigapixel-recover-4x.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+.content{
+    padding: 50px;
+    color: aquamarine;
+    padding-bottom: 20px;
+
+}
+.vid{
+    margin-right: 10px;
+    float: left;
+}
+.para1{
+    font-size: 20px;
+    margin-right: 20px;
+}
+.wrapper {
+    width: 80%;
+	height: auto;
+    margin: auto;
+    padding-bottom: 100px;
+}
+.img-area {
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	border-radius: 10px;
+    row-gap: 30px;
+    column-gap: 30px;
+}
+
+img {
+	width: 90%;
+	height: 100%;
+	object-fit: cover;
+	left: 0;
+	top: 0;
+	position: relative;
+}
+.container2{
+    height: 30vh;
+    background-image: url("Images/kds.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    filter: grayscale(100%);
+}
+.content2{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    background-color: black;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999;
+}
+.head, .para1{
+    animation-name: movee;
+    animation: movee 6s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.para2{
+    animation-name: movee;
+    animation: movee 6s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+@keyframes movee {
+    from{
+        opacity: 0;
+        transform: translateX(45px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.vid{
+    animation-name: vidd;
+    animation:vidd 6s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+@keyframes vidd{
+    from{
+        opacity: 0;
+        transform: translateY(45px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.img1, .img3{
+    animation-name: imgg;
+    animation: imgg 6s linear cubic-bezier(0.00, 0.94, 0.14, 1.00);
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+@keyframes imgg{
+    from{
+      translate: none; 
+      rotate: none; 
+      scale: none; 
+      transform: translate(-50%, 0%) rotate(-20deg) scale(0.9, 0.9); 
+      opacity: 0;
+    }
+    to{
+        translate: none; 
+        rotate: none; 
+        scale: none; 
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.img2, .img4{
+    animation-name: imgg2;
+    animation: imgg2 6s linear cubic-bezier(0.00, 0.94, 0.14, 1.00);
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+@keyframes imgg2{
+    from{
+      translate: none; 
+      rotate: none; 
+      scale: none; 
+      transform: translate(50%, 0%) rotate(20deg) scale(0.9, 0.9);
+      opacity: 0;
+    }
+    to{
+        translate: none; 
+        rotate: none; 
+        scale: none; 
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.card{
+    position: relative;
+    left: 0;
+    width: 20px;
+    border-radius: 40px;
+
+    height: 400px;
+    overflow: hidden;
+    transition: .4s ease-in-out;
+
+    box-shadow: 1 5 12px rgba(0, 0, 0, .3);
+    flex: .15;
+}
+
+.card img{
+    position: relative;
+    height: 500px;
+    object-fit: cover;
+}
+
+.card:hover{
+    flex: 1 1 0;
+    cursor: pointer;
+    border-radius: 40px;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+.loader {
+    border-top: 25px solid black;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    font-family: 'offwhite';
+    text-align: center;
+	font-size: 180px;
+	background-image: linear-gradient(120deg, #000000 50%, transparent 50%);
+	background-size: 200% 100%;
+	-webkit-text-stroke-color: rgb(0, 163, 165);
+	-webkit-text-stroke-width: 0.03em;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+    text-transform: uppercase;
+	animation-name: fill;
+    animation: fill 6s linear ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 90%;
+}
+@keyframes fill {
+	0% {
+		background-position: 100% 0;
+	}
+    100%{
+        background-position: 0 -100%;
+    }
+}
+@font-face {
+    font-family: "offwhite";
+    src: url(OFFWHITE.ttf);
+ }
+@font-face{
+    font-family: "MarinsPerdusRegular";
+    src: url(MarinsPerdus-dafont.otf);
+}
+.graffiti{
+    background-color: orange;
+    border-bottom: 25px solid orange;
+}
+.pra p{
+    margin-left: 50px;
+    margin-right: 50px;
+    animation: fade-in 3s forwards ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 90%;
+}
+.pra{
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 40px;
+    color: white;
+
+    background:#121212;
+}
+@keyframes fade-in{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.wrapper3 {
+    width: 100%;
+    max-width: 2500px;
+    margin-inline: auto;
+    position: relative;
+    height: 300px;
+    margin-top: 5rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+  
+  @keyframes scrollLeft {
+    to {
+      left: -200px;
+    }
+  }
+  
+  .item {
+    width: 240px;
+    height: 200px;
+    background-size: cover;
+    border-radius: 6px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #121212;
+    font-weight: 300;
+    left: max(calc(200px * 8), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .item1 {
+    background-image: url(Images/Mural1.jpg);
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+  }
+  
+  .item2 {
+    background-image: url(Images/Mural12.jpg);
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+  }
+  
+  .item3 {
+    background-image: url(Images/Mural11.jpg);
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+  }
+  
+  .item4 {
+    background-image: url(Images/Mural5.jpg);
+    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+  }
+  
+  .item5 {
+    background-image: url(Images/Mural15.jpg);
+    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+  }
+  
+  .item6 {
+    background-image: url(Images/Mural14.jpg);
+    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+  }
+  
+  .item7 {
+    background-image: url(Images/Mural7.jpg);
+    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+  }
+  
+  .item8 {
+    background-image: url(Images/Mural8.jpg);
+    animation-delay: calc(30s / 8 * (8 - 8) * -1);
+  }
+  .container3{
+    height: 50vh;
+    background-image: url(Images/Mural3.jpg);
+    opacity: 0.7;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+.murals{
+    background-color: rgb(230, 0, 0);
+}
+.loader2 {
+    margin-top: 20px;
+    padding-top: 70px;
+    padding-bottom: 25px;
+    font-family: "MarinsPerdusRegular";
+    text-align: center;
+	font-size: 200px;
+    text-transform: uppercase;
+    color: black;
+}
+.loader2 {
+    border-top: 25px solid black;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    text-align: center;
+	font-size: 150px;
+	background-image: linear-gradient(120deg, #000000 50%, transparent 50%);
+	background-size: 200% 100%;
+	-webkit-text-stroke-color: none;
+	-webkit-text-stroke-width: 0.01em;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+    text-transform: uppercase;
+	animation-name: fill2;
+    animation: fill2 7s linear ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 90%;
+}
+@keyframes fill2 {
+	0% {
+		-webkit-text-stroke-color: none;
+	}
+    100%{
+        -webkit-text-stroke-color: rgb(255, 255, 255);
+    }
+}
+.paraa{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #121212;
+    color: red;
+    font-size: 40px;
+}
+.pp{
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 40px;
+    color:rgb(255, 255, 255);
+    margin: 40px;
+    background:#121212;
+}
+.pa{
+    font-size: 40px;
+    color:rgb(246, 246, 246);
+    margin: 40px;
+    background:#121212;
+}
+.paraa p{
+    margin-left: 50px;
+    margin-right: 50px;
+    animation: fade-in 3s forwards ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 70%;
+}
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+.sculptures{
+    background-image: url(Images/bgg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bannerr{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.bannerr .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.bannerr .slider .floating{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(550px);
+}
+.bannerr .slider .floating img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.bannerr .contentc{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.bannerr .contentc h1{
+    font-family: 'ICA Rubrik';
+    font-size: 13em;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+}
+.bannerr .contentc h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+.bannerr .contentc .author{
+    font-family: Poppins;
+    text-align: right;
+    max-width: 190px;
+}
+.bannerr .contentc h2{
+    font-size: 3em;
+}
+.bannerr .contentc .model{
+    background-image: url(images/tinker_00000-removebg-preview-topaz-upscale-6x.png);
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+.container4{
+    height: 40vh;
+    background-image: url(Images/Sc.jpg);
+    opacity: 0.8;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+.container5{
+    height: 40vh;
+    background-image: url(Images/Stencil5.jpg);
+    opacity: 0.8;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    filter: grayscale(1);
+}
+@font-face{
+    font-family: "rafika";
+    src: url(FontsFree-Net-rafika.ttf);
+}
+.sten{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'rafika';
+    font-size: 140px;
+    text-align: center;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+	-webkit-text-stroke-width: 0.03em;
+}
+.stencils{
+    background: linear-gradient(rgb(11, 11, 11), rgb(112, 112, 112));
+}
+.wrapper8 {
+    width: 80%;
+	height: auto;
+    margin: auto;
+    padding-bottom: 100px;
+}
+.img-area4 {
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	border-radius: 10px;
+    row-gap: 30px;
+    column-gap: 30px;
+}
+.img11, .img13{
+    animation-name: imggn;
+    animation: imggn 6s linear ease-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 90%;
+}
+@keyframes imggn{
+    from{
+        filter: grayscale(0);
+        border-radius: 50%;
+      transform: translateX(-100px); 
+      opacity: 0;
+    }
+    to{
+        filter: grayscale(1);
+        border-radius: 0%;
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.img12, .img14{
+    animation-name: imggnn;
+    animation: imggnn 3s linear ease-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 80%;
+}
+@keyframes imggnn{
+    from{
+        filter: grayscale(0);
+        border-radius: 50%;
+      transform: translateZ(100px); 
+      opacity: 0;
+    }
+    to{
+        filter: grayscale(1);
+        border-radius: 10%;
+        transform: translateZ(0px);
+        opacity: 1;
+    }
+}
+.paraaaa{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #121212;
+    color: white;
+    font-size: 40px;
+}
+.paraaaa p{
+    margin: 40px;
+}
+.paraaaa p{
+    animation-name: moveee;
+    animation: moveee 6s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+@keyframes moveee {
+    from{
+        filter: blur(5px);
+        opacity: 0;
+        transform: translateX(45px);
+    }
+    to{
+        filter: blur(0px);
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.aboutus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    background-image: url(Images/black-topaz-upscale-4x.jpg);
+    opacity: 0.8;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+
+}
+.box9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.box9 a{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid orange;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(29, 29, 29);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+    transition: color 500ms ease;
+
+}
+.box9 a:hover{
+    color: orange;
+}
+.container a{
+    filter: hue-rotate(80deg);
+}
